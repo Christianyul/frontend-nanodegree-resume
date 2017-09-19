@@ -13,7 +13,23 @@ var bio = {
     'welcomemsg':'Hi there! I\'m using this.',
     'skills':skills
 }
+
+var work={}
+
+work.currentposition = 'Developer';
+work.employer = 'Samuel Jackson';
+work.yearsworked = 3;
+work.city='Manhattan';
+
+var education={}
+
+education['lastschool']='ITESA';
+education['years']=2;
+education['schoolcity']='Santo Domingo'
 //console.log(key);
 $('#header').prepend(HTMLheaderRole.replace('%data%',bio['role']));
 $('#header').prepend(HTMLheaderName.replace('%data%',bio['name']));
-$('#topContacts').prepend(HTMLmobile.replace('%data%',bio['contactinfo']));
+
+$('#topContacts').append(HTMLmobile.replace('%data%',bio['contactinfo']));
+
+$('#topContacts').append(HTMLbioPic.replace('%data%',bio['urlpic']))
