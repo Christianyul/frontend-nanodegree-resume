@@ -9,7 +9,7 @@ var bio = {
     'name':'Christian',
     'role': 'Developer',
     'contactinfo':8092998585,
-    'urlpic':'images/me.jpg',
+    'urlpic':'images/fry.jpg',
     'welcomemsg':'Hi there! I\'m using this.',
     'skills':skills
 }
@@ -32,4 +32,11 @@ $('#header').prepend(HTMLheaderName.replace('%data%',bio['name']));
 
 $('#topContacts').append(HTMLmobile.replace('%data%',bio['contactinfo']));
 
-$('#topContacts').append(HTMLbioPic.replace('%data%',bio['urlpic']))
+$('#header').append(HTMLbioPic.replace('%data%',bio['urlpic']));
+$('#header').append(HTMLwelcomeMsg.replace('%data%',bio['welcomemsg']));
+$('#header').append(HTMLskillsStart);
+bio['skills'].forEach(function(element) {
+    $('#skills').append(HTMLskills.replace('%data%',element));
+});
+
+
